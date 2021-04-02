@@ -1,7 +1,7 @@
 const pool = require("./db");
 
-const sql = 'INSERT INTO public.category(cat_description) VALUES ($1) RETURNING *';
-const data = ['work'];
+const sql = 'UPDATE public.category SET cat_description = $1 WHERE cat_id =16 RETURNING *';
+const data = ['others'];
 
 pool.query(sql,data,(err,res)=>{
     if(err){

@@ -1,7 +1,7 @@
 const pool = require("./db");
 
 const sql = 'DELETE FROM public.todo WHERE todo_id = $1 RETURNING*';
-const data = [7];
+const data = [8];
 
 pool.query(sql,data,(err,res)=>{
     if(err){

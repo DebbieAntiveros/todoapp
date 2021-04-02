@@ -1,7 +1,7 @@
 const pool = require("./db");
 
-const sql = 'INSERT INTO public.category(cat_description) VALUES ($1) RETURNING *';
-const data = ['work'];
+const sql = 'DELETE FROM public.assignment WHERE asmgt_id = $1 RETURNING*';
+const data = [14];
 
 pool.query(sql,data,(err,res)=>{
     if(err){

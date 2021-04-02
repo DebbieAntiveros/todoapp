@@ -1,7 +1,7 @@
 const pool = require("./db");
 
 const sql = 'INSERT INTO public.todo(todo_desc) VALUES ($1) RETURNING *';
-const data = ['biking'];
+const data = ['eat'];
 
 pool.query(sql,data,(err,res)=>{
     if(err){

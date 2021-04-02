@@ -1,7 +1,7 @@
 const pool = require("./db");
 
 const sql = 'DELETE FROM public.category WHERE cat_id = $1 RETURNING*';
-const data = [6];
+const data = [5];
 
 pool.query(sql,data,(err,res)=>{
     if(err){
